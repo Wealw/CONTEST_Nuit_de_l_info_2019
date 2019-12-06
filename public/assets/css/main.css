@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Roboto', sans-serif;
+}
+* {
+  font-family: 'Roboto', sans-serif;
+}
+header {
+  position: sticky;
+  top: 0;
+}
+main {
+  min-height: 100vh;
+}
+footer {
+  background-color: black;
+  color: white;
+  padding: 16px 20%;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+}
+/*# sourceMappingURL=main.css.map */
