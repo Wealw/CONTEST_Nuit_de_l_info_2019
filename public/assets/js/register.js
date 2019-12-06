@@ -1,4 +1,11 @@
 let progression=0
+let range=document.getElementById('formControlRange')
+let phone=document.getElementById('phone')
+let color=document.getElementById('ColorImg')
+let colorPrev=document.getElementById('colorPrev')
+let r=document.getElementById('r')
+let g=document.getElementById('g')
+let b=document.getElementById('b')
 let hohos=[]
 let formButtons=[
     document.getElementById('NameBtn'),
@@ -10,7 +17,8 @@ let formButtons=[
     document.getElementById('ColorBtn'),
     document.getElementById('QiBtn'),
     document.getElementById('LavaboBtn'),
-    document.getElementById('PasswordBtn')
+    document.getElementById('PasswordBtn'),
+    document.getElementById('SubmitBtn')
 ]
 let formElements=[
     document.getElementById('Name'),
@@ -22,7 +30,8 @@ let formElements=[
     document.getElementById('Color'),
     document.getElementById('Qi'),
     document.getElementById('Lavabo'),
-    document.getElementById('Password')
+    document.getElementById('Password'),
+    document.getElementById('Siege')
 ]
 for(let i=0; i<=15; i++){
     hohos[i]=document.getElementById(`haha${i}`)
@@ -42,8 +51,11 @@ formButtons.forEach(function(button){
 })
 
 function showElement(){
-    console.log(formElements[progression].style.display)
-    formElements[progression].style.display="block";
+    if(progression==3 || progression==6){
+        formElements[progression].style.display="grid";
+    } else {
+        formElements[progression].style.display="block";
+    }
     formButtons[progression].style.display="block";
 }
 
@@ -57,3 +69,17 @@ function drawProgression(){
         hohos[i].style.background="#4eb3e6"
     }
 }
+
+range.addEventListener('input', function(){
+    phone.value='0'+event.target.value
+})
+
+color.addEventListener('click', function(){
+    let R = (Math.floor(Math.random() * (255 - 0)) + 0 )% 255
+    let G = (Math.floor(Math.random() * (255 - 0)) + 0 )% 255
+    let B = (Math.floor(Math.random() * (255 - 0)) + 0 )% 255
+    r.value='R: '+R;
+    g.value='G: '+G;
+    b.value='B: '+B;
+    colorPrev.style.background=`rgb(${R},${G},${B})`
+})

@@ -47,12 +47,56 @@
         <button type="button" class="btn btn-secondary" id="EmailBtn">Passer à la suite</button>
         <div class="form-group text-center" id="Birthdate">
             <label for="Birthdate">Date de naissance</label>
-            <input type="input" class="form-control" required>
+            <select class="form-control birthdateSelect">
+                {% for i in 1..9 %}
+                <option>{{i}}</option>
+                {% endfor %}
+            </select>
+            <select class="form-control birthdateSelect">
+                {% for i in 1..9 %}
+                <option>{{i}}</option>
+                {% endfor %}
+            </select>
+            <select class="form-control birthdateSelect monthSelect">
+                <option>Janvier</option>
+                <option>Février</option>
+                <option>Mars</option>
+                <option>Avril</option>
+                <option>Mai</option>
+                <option>Juin</option>
+                <option>Juillet</option>
+                <option>Août</option>
+                <option>Semptembre</option>
+                <option>Octobre</option>
+                <option>Novembre</option>
+                <option>Décembre</option>
+            </select>
+            <select class="form-control birthdateSelect">
+                {% for i in 1..9 %}
+                <option>{{i}}</option>
+                {% endfor %}
+            </select>
+            <select class="form-control birthdateSelect">
+                {% for i in 1..9 %}
+                <option>{{i}}</option>
+                {% endfor %}
+            </select>
+            <select class="form-control birthdateSelect">
+                {% for i in 1..9 %}
+                <option>{{i}}</option>
+                {% endfor %}
+            </select>
+            <select class="form-control birthdateSelect">
+                {% for i in 1..9 %}
+                <option>{{i}}</option>
+                {% endfor %}
+            </select>
         </div>
         <button type="button" class="btn btn-secondary" id="BirthdateBtn">Passer à la suite</button>
         <div class="form-group text-center" id="Phone">
             <label for="Phone">Numéro de téléphone</label>
-            <input type="input" class="form-control" required>
+            <input type="input" class="form-control" value="0000000000" id="phone" readonly>
+            <input type="range" min="0" max="999999999" class="form-control-range" id="formControlRange">
         </div>
         <button type="button" class="btn btn-secondary" id="PhoneBtn">Passer à la suite</button>
         <div class="form-group text-center" id="Address">
@@ -62,7 +106,11 @@
         <button type="button" class="btn btn-secondary" id="AddressBtn">Passer à la suite</button>
         <div class="form-group text-center" id="Color">
             <label for="Color">Couleur préférée</label>
-            <input type="input" class="form-control" required>
+            <img src="assets/images/color.gif" alt="Color Picker" width=150 id="ColorImg"  style="cursor: url({{ asset('assets/images/colorPicker.svg') }}), auto;">
+            <input type="input" class="form-control colorValue" value="R: ___" id="r" required readonly>
+            <input type="input" class="form-control colorValue" value="G: ___" id="g" required readonly>
+            <input type="input" class="form-control colorValue" value="B: ___" id="b" required readonly>
+            <div id="colorPrev"></div>
         </div>
         <button type="button" class="btn btn-secondary" id="ColorBtn">Passer à la suite</button>
         <div class="form-group text-center" id="Qi">
@@ -84,7 +132,7 @@
             <label for="Siege">Quel est le meilleur engin de siège?</label>
             <input type="input" class="form-control" required>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <a class="btn btn-secondary" id="SubmitBtn" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=PLahKLy8pQdCM0SiXNn3EfGIXX19QGzUG3">Submit</a>
     </form>
 {% endblock %}
 

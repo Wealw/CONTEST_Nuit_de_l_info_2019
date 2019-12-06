@@ -1,9 +1,28 @@
 h2{
     text-align: center;
+    margin-top: 50px;
 }
 
 form{
     display: grid;
+}
+
+#Birthdate{
+    display: none;
+    grid-template-columns: auto;
+}
+
+label[for="Birthdate"]{
+    grid-column: 1/span 7;
+    grid-row: 1;
+}
+
+.birthdateSelect{
+    width: 50px;
+}
+
+.monthSelect{
+    width: 200px;
 }
 
 .form-group{
@@ -11,18 +30,53 @@ form{
     grid-row: 1;
     justify-self: center;
     display: none;
+    width: 400px;
 }
 
 .btn-secondary{
     width: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     grid-column: 1;
     grid-row: 2;
     justify-self: center;
     display: none;
 }
 
+#Color{
+    display: none;
+    grid-template-columns: auto;
+}
+
+label[for="Color"]{
+    grid-column: 1/span 3;
+    grid-row: 1;
+}
+
+#ColorImg{
+    grid-column: 1/span 3;
+    grid-row: 2;
+    justify-self: center;
+    cursor: url('/assets/images/colorPicker.svg'), auto;
+}
+
+.colorValue{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    grid-row: 3;
+}
+
+#colorPrev{
+    grid-column: 2;
+    grid-row: 4;
+    background: rgb(255, 255, 255);
+    border: 1px solid black;
+    height: 50px;
+}
+
 #prog{
     display: grid;
+    margin-bottom: 50px;
 }
 
 #ProgressionBar{
@@ -46,8 +100,4 @@ form{
 
 .hoho{
     height: 15px;
-}
-
-.btn-primary{
-    grid-row: 4;
 }
