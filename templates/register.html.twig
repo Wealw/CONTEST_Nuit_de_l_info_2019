@@ -1,7 +1,93 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('assets/css/register.css') }}">
+{% endblock %}
+
 {% block title %}Register{% endblock %}
 
 {% block body %}
+    <h2>Inscrivez-vous!</h2>
+    <div id="prog">
+        <div id="ProgressionBar">
+            <div class="hoho" id="haha0"></div>
+            <div class="hoho" id="haha1"></div>
+            <div class="hoho" id="haha2"></div>
+            <div class="hoho" id="haha3"></div>
+            <div class="hoho" id="haha4"></div>
+            <div class="hoho" id="haha5"></div>
+            <div class="hoho" id="haha6"></div>
+            <div class="hoho" id="haha7"></div>
+            <div class="hoho" id="haha8"></div>
+            <div class="hoho" id="haha9"></div>
+            <div class="hoho" id="haha10"></div>
+            <div class="hoho" id="haha11"></div>
+            <div class="hoho" id="haha12"></div>
+            <div class="hoho" id="haha13"></div>
+            <div class="hoho" id="haha14"></div>
+            <div class="hoho" id="haha15"></div>
+        </div>
+        <div id="ui"></div>
+    </div>
+    <form class="text-center">
+        <div class="form-group text-center" id="Name">
+            <label for="Name">Nom</label>
+            <input type="input" class="form-control" required>
+        </div>
+        <button type="button" class="btn btn-secondary col-md-6" id="NameBtn">Passer à la suite</button>
+        <div class="form-group text-center" id="Lastname">
+            <label for="Lastname">Prénom</label>
+            <input type="input" class="form-control" required>
+        </div>
+        <button type="button" class="btn btn-secondary" id="LastnameBtn">Passer à la suite</button>
+        <div class="form-group text-center" id="Email">
+            <label for="Email">Adresse email</label>
+            <input type="email" class="form-control" required>
+        </div>
+        <button type="button" class="btn btn-secondary" id="EmailBtn">Passer à la suite</button>
+        <div class="form-group text-center" id="Birthdate">
+            <label for="Birthdate">Date de naissance</label>
+            <input type="input" class="form-control" required>
+        </div>
+        <button type="button" class="btn btn-secondary" id="BirthdateBtn">Passer à la suite</button>
+        <div class="form-group text-center" id="Phone">
+            <label for="Phone">Numéro de téléphone</label>
+            <input type="input" class="form-control" required>
+        </div>
+        <button type="button" class="btn btn-secondary" id="PhoneBtn">Passer à la suite</button>
+        <div class="form-group text-center" id="Address">
+            <label for="Address">Adresse</label>
+            <input type="input" class="form-control" required>
+        </div>
+        <button type="button" class="btn btn-secondary" id="AddressBtn">Passer à la suite</button>
+        <div class="form-group text-center" id="Color">
+            <label for="Color">Couleur préférée</label>
+            <input type="input" class="form-control" required>
+        </div>
+        <button type="button" class="btn btn-secondary" id="ColorBtn">Passer à la suite</button>
+        <div class="form-group text-center" id="Qi">
+            <label for="Qi">Estimez votre QI</label>
+            <input type="input" class="form-control" required>
+        </div>
+        <button type="button" class="btn btn-secondary" id="QiBtn">Passer à la suite</button>
+        <div class="form-group text-center" id="Lavabo">
+            <label for="Lavabo">Il est beau le </label>
+            <input type="input" class="form-control" pattern="lavabo" required>
+        </div>
+        <button type="button" class="btn btn-secondary" id="LavaboBtn">Passer à la suite</button>
+        <div class="form-group text-center" id="Password">
+            <label for="Password">Mot de passe</label>
+            <input type="password" class="form-control" required>
+        </div>
+        <button type="button" class="btn btn-secondary" id="PasswordBtn">Passer à la suite</button>
+        <div class="form-group text-center" id="Siege">
+            <label for="Siege">Quel est le meilleur engin de siège?</label>
+            <input type="input" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{% endblock %}
 
+{% block javascripts %}
+<script src="{{ asset('assets/js/register.js') }}"></script>
 {% endblock %}
