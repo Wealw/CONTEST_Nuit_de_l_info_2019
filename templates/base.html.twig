@@ -5,7 +5,9 @@
         <meta name="description" content="Nuit de l'info 2019"/>
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
         <link rel="icon" href="{{ asset('assets/images/favicon.png') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
@@ -28,7 +30,7 @@
             </div>
         </nav>
         {% block body %}{% endblock %}
-        <footer class="footer dark mt-auto py-3" style=" background-image: url('{{ asset('assets/images/daVinciCloud-gris.svg') }}');background-color: black; color: white; padding: 16px 20%; text-align: center; position: fixed;width: 100%; bottom: 0;">
+        <footer class="footer dark mt-auto py-3" style="background-image: url('{{ asset('assets/images/daVinciCloud-gris.svg') }}');">
             <p>Directeur de la publication: Théo Weimann pour le PCL</p>
             <p>Tel: 06.40.88.10.54</p>
             <p>Mel: <a href="mailto: theo.Weimann.priv@gmail.com">theo.weimann.priv@gmail.com</a></p>
